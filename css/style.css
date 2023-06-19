@@ -1,0 +1,25 @@
+body {
+    background-color: azure;
+    font-weight: 400;
+    font-family: Roboto;
+    font-size: 18;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: inline-block;
+}
+
+.navigation {
+    display: flex;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+}
+
+.reserved {
+    background-color: black;
+}
