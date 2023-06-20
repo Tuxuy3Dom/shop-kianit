@@ -11,8 +11,24 @@ nav {
     display: inline-block;
 }
 
+ul {
+    list-style-type: none;
+}
+
+.navigations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 25px; */
+}
+
 .navigation {
     display: flex;
+}
+
+.navigation-item a {
+    text-decoration: none;
+    padding-right: 25px;
 }
 
 footer p{
