@@ -7,6 +7,7 @@
     <title>Kianit Sp. z. o. o.</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon/favicon.png" type="image/x-icon">
+    <script src="jquery-1.10.2.min.js"></script>
   </head>
   <body id="body">
     <!-- Nawigation main page -->
@@ -40,7 +41,18 @@
         <h2>Kategorie</h2>
         <!-- tu można umieścić listę kategorii produktów -->
       </section>
-      
+      <script>
+      $getJSON('data.json', function(data) {
+        var output = "<ul";
+        for (var i in data.products) {
+            output += "<li>" + data.products[i].name + "</li>"
+            output += "<li>" + data.products[i].price + "</li>"
+            output += "<li>" + data.products[i].category + "</li>"
+        }
+        output += "</ul>";
+        document.getElementById('categories').innerHTML = output;
+    });
+      </script>
       <section id="recent-products">
         <h2>Ostatnio dodane produkty</h2>
         <!-- tu można umieścić listę ostatnio dodanych produktów -->
