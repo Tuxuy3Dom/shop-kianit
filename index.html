@@ -14,7 +14,7 @@
     <header class="container header">
       <div class="wrapper">
         <div class="navigations">
-          <h1>Kategorie</h1>
+          <h1>Logo</h1>
           <!-- Okno modalne w tym miejscu z otwieraniem i zamykaniem kategorii sklepu -->
           <nav>
             <ul class="navigation">
@@ -26,6 +26,9 @@
               <li class="navigation-item"><a href="#">REGULAMIN</a></li>
             </ul>
           </nav>
+          <div>
+            <h1>Koszyk</h1>
+          </div>
         </div>
       </div>
     </header>
@@ -41,18 +44,7 @@
         <h2>Kategorie</h2>
         <!-- tu można umieścić listę kategorii produktów -->
       </section>
-      <script>
-      $getJSON('data.json', function(data) {
-        var output = "<ul";
-        for (var i in data.products) {
-            output += "<li>" + data.products[i].name + "</li>"
-            output += "<li>" + data.products[i].price + "</li>"
-            output += "<li>" + data.products[i].category + "</li>"
-        }
-        output += "</ul>";
-        document.getElementById('categories').innerHTML = output;
-    });
-      </script>
+      
       <section id="recent-products">
         <h2>Ostatnio dodane produkty</h2>
         <!-- tu można umieścić listę ostatnio dodanych produktów -->
