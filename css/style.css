@@ -193,6 +193,31 @@ ul {
     color: green;
 }
 
+.pagination-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+  
+.pagination-list li {
+    margin: 0 5px;
+}
+  
+.pagination-list li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+}
+  
+.pagination-list li a.current {
+    background-color: #333;
+    color: #fff;
+}
+
 /* footer {
     color: #ABABAB;
     position: fixed;
