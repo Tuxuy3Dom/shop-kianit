@@ -1,190 +1,52 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kianit Sp. z. o. o. | Sklep internetowy</title>
-    <meta name="Ihor Yaremchuk" content="https://www.opentravel.blog/">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/332d4d0825.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="favicon/favicon.png" type="image/x-icon">
-    <script src="jquery-1.10.2.min.js"></script>
-    <script src="/js/module/include.js"></script>
-  </head>
-  <body id="body">
-    <!-- Header main page include <header.html> start -->
-      <div include-html="header.html"></div>
-      <script>includeHTML();</script>
-    <!-- Header main page include <header.html> end -->
-
-    <div class="wrapper-cat-ban">
-      <div class="categories-list">
-        <ul class="navigation-cat">
-          <li class="navigation-item-cat arrow-down">
-            <a href="#">Akcesoria</a>
-          </li>
-          <li class="navigation-item-cat"><a href="#">Akumulatory</a></li>
-          <li class="navigation-item-cat"><a href="#">Artykuły ścierne</a></li>
-          <li class="navigation-item-cat"><a href="#">Budowlanka</a></li>
-          <li class="navigation-item-cat"><a href="#">Biuro</a></li>
-          <li class="navigation-item-cat"><a href="#">BHP</a></li>
-          <li class="navigation-item-cat"><a href="#">Chemia</a></li>
-          <li class="navigation-item-cat"><a href="#">Sprzęt domowy</a></li>
-          <li class="navigation-item-cat"><a href="#">Narzędzia</a></li>
-          <li class="navigation-item-cat"><a href="#">Rękawice</a></li>
-        </ul>
-      </div>
-      <div class="banners ">
-        <!-- Slider wrapper container start -->
-        <section class="slider swiper-container">
-          <div class="swiper-wrapper">
-            <section class="slide slide-1 swiper-slide">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-4 col-10 offset-lg-1">
-                    <span class="label">Banner</span>
-                    <h2 class="slide-title">Reklama</h2>
-                    <p class="slide-description">Akcesoria BHP i rzeczy spawalnicze!</p>
-                    <button class="button add-to-cart" data-id="003">
-                      <span class="button-price">zł. 110</span>
-                      <span class="button-text">Dostępna cena</span>
-                    </button>
-                  </div>
-                  <!-- /.col-4 offset-lg-1 -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- /.container -->
-            </section>
-            <section class="slide slide-1 swiper-slide">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-4 col-10 offset-lg-1">
-                    <span class="label">New</span>
-                    <h2 class="slide-title">Text T-Shirt</h2>
-                    <p class="slide-description">Women’s pearl basic knit sweater with a round neck. Available in several colours. Free shipping to stores.</p>
-                    <button class="button add-to-cart" data-id="004">
-                      <span class="button-price">$119</span>
-                      <span class="button-text">Shop now</span>
-                    </button>
-                  </div>
-                  <!-- /.col-4 offset-lg-1 -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- /.container -->
-            </section>
-            <section class="slide slide-1 swiper-slide">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-4 col-10 offset-lg-1">
-                    <span class="label">Bestseller</span>
-                    <h2 class="slide-title">Sweater Choker Neck</h2>
-                    <p class="slide-description">Women’s pearl basic knit sweater with a round neck. Available in several colours. Free shipping to stores.</p>
-                    <button class="button add-to-cart" data-id="005">
-                      <span class="button-price">$319</span>
-                      <span class="button-text">Shop now</span>
-                    </button>
-                  </div>
-                  <!-- /.col-4 offset-lg-1 -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- /.container -->
-            </section>
-          </div>
-          <!-- /.swiper-wrapper -->
-          <div class="slider-nav">
-            <div class="container">
-              <div class="row justify-content-between">
-                <div class="col-1">
-                  <button class="slider-button slider-button-prev">
-                    <img src="img/arrow-prev.svg" alt="icon: arrow-prev">
-                  </button>
-                </div>
-                <!-- /.col-1 -->
-                <div class="col-1">
-                  <button class="slider-button slider-button-next">
-                    <img src="img/arrow-next.svg" alt="icon: arrow-prev">
-                  </button>
-                </div>
-                <!-- /.col-1 -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.container -->
-          </div>
-          <!-- /.slider-nav -->
-        </section>
-        <!-- /.slider -->
-      </div>
-    </div>
-<!-- Slider wrapper container end -->
-
-    <!-- Content section main page -->
-    <main class="container-main">
-      <section id="featured-products">
-        <h2 class="underline">Nasze oferty</h2>
-        <div class="card-container" id="offer-list">
-          <div class="card">
-            <img src="img/banner.jpg" alt="dotyczy oferty produktu">
-            <h2>Tytół</h2>
-            <p>Krótki opis</p>
-            <p class="price">Cena: 0.0 pln</p>
-          </div>
-          <div class="card">
-            <img src="img/banner.jpg" alt="dotyczy oferty produktu">
-            <h2>Tytół</h2>
-            <p>Krótki opis</p>
-            <p class="price">Cena: 0.0 pln</p>
-          </div>
-          <div class="card">
-            <img src="img/banner.jpg" alt="dotyczy oferty produktu">
-            <h2>Tytół</h2>
-            <p>Krótki opis</p>
-            <p class="price">Cena: 0.0 pln</p>
-          </div>
-          <div class="card">
-            <img src="img/banner.jpg" alt="dotyczy oferty produktu">
-            <h2>Tytół</h2>
-            <p>Krótki opis</p>
-            <p class="price">Cena: 0.0 pln</p>
-          </div>
-          <div class="card">
-            <img src="img/banner.jpg" alt="dotyczy oferty produktu">
-            <h2>Tytół</h2>
-            <p>Krótki opis</p>
-            <p class="price">Cena: 0.0 pln</p>
-          </div>
-          <div class="card">
-            <img src="img/banner.jpg" alt="dotyczy oferty produktu">
-            <h2>Tytół</h2>
-            <p>Krótki opis</p>
-            <p class="price">Cena: 0.0 pln</p>
-          </div>
-        </div>
-        <div id="pagination">
-          <ul class="pagination-list"></ul>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kianit Sp. z. o. o. | Sklep internetowy</title>
+  <meta name="Ihor Yaremchuk" content="https://www.opentravel.blog/">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/332d4d0825.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="favicon/favicon.png" type="image/x-icon">
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="/js/module/include.js"></script>
+</head>
+<body id="body">
+  <!-- Header main page include <header.html> start -->
+    <div include-html="header.html"></div>
+  <!-- Header main page include <header.html> end -->
+    
+  <!-- Main categories and banners on home page start -->
+  <main class="container-cat">
+    <aside class="categories">
+      <h1 class="categories-title">Kategorie</h1>
+      <section class="categories-items">
+        <button class="active">Spawanie</button>
+        <button>Drut</button>
+        <button>Zacisk</button>
+        <button>Uchwyt</button>
+        <button>Pręty</button>
       </section>
-      
-      <section id="categories-offers">
-        <h2>Kategorie</h2>
-        <!-- tu można umieścić listę kategorii produktów -->
-      </section>
-      
-      <section id="recent-products">
-        <h2>Ostatnio dodane produkty</h2>
-        <!-- tu można umieścić listę ostatnio dodanych produktów -->
-      </section>
-    </main>
+    </aside>
+    <section>Banner</section>
+  </main>
+  <!-- Main categories and banners on home page start -->
+  
+  <!-- Content section - our offers - start include <offers.html> -->
+    <h2 class="offers-title">Nasze oferty</h2>
+    <div include-html="offers.html"></div>
+  <!-- Content section - our offers - start include <offers.html> -->
 
-    <!-- Footer section include <footer.html> -->
+
+  <!-- Footer section include <footer.html> -->
     <div include-html="footer.html"></div>
-    <script>includeHTML();</script>
-    <!-- Footer section -->
+  <!-- Footer section -->
+  
+  <!-- JavaScript files run - start -->
+  <script>includeHTML();</script>
   <script src="/js/products.js"></script>
 	<script src="/js/main.js"></script>
-  </body>
+  <!-- JavaScript files end -->
+</body>
 </html>
