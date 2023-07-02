@@ -1,0 +1,70 @@
+<div class="container">
+    <nav class="wrapper-nav">
+        <ul class="navigation-top-bar">
+            <li class="logo"><a href="#"><img src="favicon/logo_transparent.png"></a></li>
+            <form action="https://www.google.com/search" method="get" class="search-bar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Szukaj towaru" name="q">
+                <!-- Okno modalne w tym miejscu z otwieraniem i zamykaniem kategorii sklepu -->
+                <div include-html="menu-modal.html"></div>
+                <script>includeHTML();</script>
+            </form>
+            <li class="basket"><a href="#"></a>Koszyk</li>
+            <li class="toggle"><a href="#"><span class="bars"></span></a></li>
+
+        </ul>
+        <ul class="navigation-bar">
+            <div include-html="menu-modal.html"></div>
+            <script>includeHTML();</script>
+            <li class="navigation-item">
+              <icon></icon>
+              <a href="#"><i class="fas fa-ticket-alt"></i>WYPRZEDAŻ</a>
+            </li>
+            <li class="navigation-item"><a href="#"><i class="fal fa-universal-access"></i>PROMOCJE</a></li>
+            <li class="navigation-item"><a href="#"><i class="fa-regular fa-sparkles"></i>NOWOŚCI</a></li>
+            <li class="navigation-item">
+              <a href="#"> <i class="fa-regular fa-user"></i> KONTO</a>
+            </li>
+            <li class="navigation-item"><a href="#"><i class="fa-regular fa-heart"></i>ULUBIONE</a></li>
+            <li class="navigation-item"><a href="#"><i class="fa-solid fa-file"></i>REGULAMIN</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+      <!-- Include navigation bar in main page with <navbar.html> -->
+        
+        <!-- <div class="wrapper">
+          <div class="navigations">
+            <div class="logo logo_transparent">
+              <a href="index.html"><img src="favicon/logo_transparent.png"></a>
+            </div>
+            <form action="https://www.google.com/search" method="get" class="search-bar">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <input type="text" placeholder="Szukaj towaru" name="q">
+              Okno modalne w tym miejscu z otwieraniem i zamykaniem kategorii sklepu
+  
+            </form>
+            <div class="basket">
+              <h1>Koszyk</h1>
+            </div>
+          </div>
+          Okno modalne w tym miejscu z otwieraniem i zamykaniem kategorii sklepu
+          <nav>
+            <ul class="navigation">
+              <div include-html="menu-modal.html"></div>
+              <script>includeHTML();</script>
+              <li class="navigation-item">
+                <icon></icon>
+                <a href="#"><i class="fas fa-ticket-alt"></i>WYPRZEDAŻ</a>
+              </li>
+              <li class="navigation-item"><a href="#"><i class="fal fa-universal-access"></i>PROMOCJE</a></li>
+              <li class="navigation-item"><a href="#"><i class="fa-regular fa-sparkles"></i>NOWOŚCI</a></li>
+              <li class="navigation-item">
+                <a href="#"> <i class="fa-regular fa-user"></i> KONTO</a>
+              </li>
+              <li class="navigation-item"><a href="#"><i class="fa-regular fa-heart"></i>ULUBIONE</a></li>
+              <li class="navigation-item"><a href="#"><i class="fa-solid fa-file"></i>REGULAMIN</a></li>
+            </ul>
+          </nav>
+        </div> -->

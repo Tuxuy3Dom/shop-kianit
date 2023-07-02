@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kianit Sp. z. o. o.</title>
+    <title>Kianit Sp. z. o. o. | Sklep internetowy</title>
     <meta name="Ihor Yaremchuk" content="https://www.opentravel.blog/">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/332d4d0825.js" crossorigin="anonymous"></script>
@@ -13,44 +13,11 @@
     <script src="/js/module/include.js"></script>
   </head>
   <body id="body">
-    <!-- Navigation main page -->
-    <header class="container header">
-      <div class="wrapper">
-        <div class="navigations">
-          <div class="logo logo_transparent">
-            <a href="index.html"><img src="favicon/logo_transparent.png"></a>
-          </div>
-          <form action="https://www.google.com/search" method="get" class="search-bar">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="text" placeholder="Szukaj towaru" name="q">
-            <!-- Okno modalne w tym miejscu z otwieraniem i zamykaniem kategorii sklepu -->
-            <div w3-include-html="menu-modal.html"></div>
-            <script>includeHTML();</script>
-          </form>
-          <div class="basket">
-            <h1>Koszyk</h1>
-          </div>
-        </div>
-        <!-- Okno modalne w tym miejscu z otwieraniem i zamykaniem kategorii sklepu -->
-        <nav>
-          <ul class="navigation">
-            <div w3-include-html="menu-modal.html"></div>
-            <script>includeHTML();</script>
-            <li class="navigation-item">
-              <icon></icon>
-              <a href="#"><i class="fas fa-ticket-alt"></i>WYPRZEDAŻ</a>
-            </li>
-            <li class="navigation-item"><a href="#"><i class="fal fa-universal-access"></i>PROMOCJE</a></li>
-            <li class="navigation-item"><a href="#"><i class="fa-regular fa-sparkles"></i>NOWOŚCI</a></li>
-            <li class="navigation-item">
-              <a href="#"> <i class="fa-regular fa-user"></i> KONTO</a>
-            </li>
-            <li class="navigation-item"><a href="#"><i class="fa-regular fa-heart"></i>ULUBIONE</a></li>
-            <li class="navigation-item"><a href="#"><i class="fa-solid fa-file"></i>REGULAMIN</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Header main page include <header.html> start -->
+      <div include-html="header.html"></div>
+      <script>includeHTML();</script>
+    <!-- Header main page include <header.html> end -->
+
     <div class="wrapper-cat-ban">
       <div class="categories-list">
         <ul class="navigation-cat">
@@ -69,7 +36,6 @@
         </ul>
       </div>
       <div class="banners ">
-
         <!-- Slider wrapper container start -->
         <section class="slider swiper-container">
           <div class="swiper-wrapper">
@@ -213,30 +179,12 @@
         <!-- tu można umieścić listę ostatnio dodanych produktów -->
       </section>
     </main>
-    
+
+    <!-- Footer section include <footer.html> -->
+    <div include-html="footer.html"></div>
+    <script>includeHTML();</script>
     <!-- Footer section -->
-    <footer class="footer">
-      <div class="container-foot">
-        <div class="footer-info">
-          <div>
-            <div class="footer-logo">
-              Logo strony
-              <img src="favicon/logo_transparent.png">
-            </div>
-            <div>Twoje konto</div>
-            <div>Zakupy</div>
-            <div>sklepu</div>
-          </div>
-          <div>
-            <div>Dane strony </div>
-            <div>media społecznościowe</div>
-          </div>
-        </div>
-        <div class="reserved">
-          <p>&copy; Comarch SA 2023. All rights reserved!</p>
-        </div>
-      </div>
-    </footer>
-	<script src="/js/index.js"></script>
+  <script src="/js/products.js"></script>
+	<script src="/js/main.js"></script>
   </body>
 </html>
