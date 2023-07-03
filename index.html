@@ -9,12 +9,28 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/332d4d0825.js" crossorigin="anonymous"></script>
   <link rel="icon" href="favicon/favicon.png" type="image/x-icon">
-  <script src="jquery-1.10.2.min.js"></script>
   <script src="/js/module/include.js"></script>
 </head>
 <body id="body">
   <!-- Header main page include <header.html> start -->
-    <div include-html="header.html"></div>
+  <header class="header">
+    <h1 class="header-title">
+        <li class="logo">
+            <a href="#"><img src="favicon/logo_transparent.png"></a>
+        </li>
+    </h1>
+    <div class="search-bar">
+        <button type="submit" class="search-bar-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="text" class="search-bar-input" placeholder="Wyszukaj w sklepie" autocomplete="off" />
+    </div>
+    <div class="header-basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p class="basket-amount">Koszyk</p>
+        <button class="basket-clear-btn">x</button> 
+    </div>
+  </header>
   <!-- Header main page include <header.html> end -->
     
   <!-- Main categories and banners on home page start -->
@@ -22,11 +38,6 @@
     <aside class="categories">
       <h1 class="categories-title">Kategorie</h1>
       <section class="categories-items">
-        <button class="active">Spawanie</button>
-        <button>Drut</button>
-        <button>Zacisk</button>
-        <button>Uchwyt</button>
-        <button>Pręty</button>
       </section>
     </aside>
     <section>Banner</section>
@@ -35,7 +46,9 @@
   
   <!-- Content section - our offers - start include <offers.html> -->
     <h2 class="offers-title">Nasze oferty</h2>
-    <div include-html="offers.html"></div>
+    <section class="products"></section>
+    <p class="empty-state">Nie znaleziono żadnego produktu...</p>
+    <!-- <div include-html="offers.html"></div> -->
   <!-- Content section - our offers - start include <offers.html> -->
 
 

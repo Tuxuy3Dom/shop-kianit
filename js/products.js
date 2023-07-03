@@ -7,7 +7,7 @@ const products = [
     price: 60.00,
     image: "./img/drut0-8.jpg",
     sale: true,
-    saleAmount: 56, 
+    saleAmount: 4, 
 },
 {
     id: 1,
@@ -33,6 +33,6 @@ const products = [
     price: 24.00,
     image: "./img/zacisk17-600.jpg",
     sale: true,
-    saleAmount: 22, 
+    saleAmount: 2, 
 },
 ]

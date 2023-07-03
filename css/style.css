@@ -25,9 +25,13 @@ body div {
 
 header {
     background-color: #000;
+    max-height: 100px;
     color: #ABABAB;
     display: flex;
-    padding: 20px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .header-title li{
@@ -36,8 +40,8 @@ header {
 }
 
 .logo i {
-    width: 200px;
-    height: 100px;
+    max-width: 160px;
+    max-height: 80px;
 }
 
 
@@ -164,7 +168,8 @@ header {
 }
 
 .product-item {
-    max-width: 450px;
+    position: relative;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,6 +190,7 @@ header {
 
 .product-item img {
     width: 250px;
+    max-height: 220px;
 }
 
 .product-name {
@@ -197,7 +203,6 @@ header {
     color: var(--black-06, rgba(0, 0, 0, 0.60));
     line-height: 22px;
     letter-spacing: 0.8px;
-    width: 80%
 }
 
 .product-price {
@@ -247,6 +252,31 @@ header {
 .product-add-to-basket-btn:hover {
     color: yellow;
     cursor: pointer;
+}
+
+.product-item-sale-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0px 0px 10px;
+    font-weight: 700;
+    color: green;
+}
+
+.product-item.on-sale .product-item-sale-info {
+    display: block;
+}
+
+.empty-state {
+    display: none;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.empty-state.active {
+    display: block;
 }
 
 /* Section main content -- our offers -- end */
@@ -444,6 +474,19 @@ header {
     border: 1px solid #DD6C46;
     background: #E6BD84;
     box-shadow: 1px 0px 13px 0px rgba(0, 0, 0, 0.20);
+}
+
+.basket-clear-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    align-self: start;
+    cursor: pointer;
+    display: none;
+}
+.basket-clear-btn.active {
+    display: block;
 }
 
 .wrapper-cat-ban {
