@@ -15,6 +15,10 @@ const addToBasket = (e) => {
 
 	basket.push(currentProducts.at(key));
 	const basketTotal = basket.reduce((sum, product) => {
+		if(product.sale === true) {
+			return (sum += product.price - product.saleAmount)
+		}
+		
 		return (sum += product.price); 
 	}, 0);
 
