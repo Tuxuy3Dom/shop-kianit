@@ -136,11 +136,38 @@ const clearBasket = () => {
 
 basketClearBtn.addEventListener("click", clearBasket);
 
+// Pagination
+const pages = document.querySelectorAll('.page');
+const offers = document.querySelectorAll('.product-item');
 
+function showPage(pageNumber) {
+  offers.forEach(function(offer) {
+	offer.style.display = 'none';
+  });
 
+  const startIndex = (pageNumber - 1) * 3;
+  const endIndex = startIndex + 3;
 
+  for (let i = startIndex; i < endIndex; i++) {
+	if (offers[i]) {
+	  offers[i].style.display = 'block';
+	}
+  }
+}
 
+pages.forEach(function(page) {
+  page.addEventListener('click', function() {
+	pages.forEach(function(page) {
+	  page.classList.remove('active');
+	});
 
+	this.classList.add('active');
+	const pageNumber = parseInt(this.textContent);
+	showPage(pageNumber);
+	});
+});
+
+showPage(1);
 
 
 
