@@ -37,7 +37,7 @@ const renderProducts = (items) => {
 	productsSection.innerHTML = "";
 	for(let i = 0; i < items.length; i++) {
 		const newProduct = document.createElement('div');
-		newProduct.className = `product-item ${items[i].sale ? "on-sale" : ""}`;
+		newProduct.className = `product-item ${items[i].sale ? "on-sale" : "on-status"}`;
 		newProduct.innerHTML = `
 		<img src="${items[i].image}" alt="${items[i].category}" />
 		<p class="product-name">${items[i].name}</p>
@@ -73,7 +73,7 @@ const renderCategories = (items) => {
 	
 	for(let i =0; i < items.length; i++) {
 		categories.add(items[i].category);
-		if (items[i].status != undefined) {
+		if (items[i].status != "") {
 			navStatus.add(items[i].status);
 		}
 	}
@@ -142,12 +142,14 @@ navButtons.forEach(btn => btn.addEventListener('click', (e) => {
 
 	currentProducts = products;
 
-	if(category === 'Wszystkie') {
-		currentProducts = products;
-	} 
-	else {
-		currentProducts = currentProducts.filter((product) => product.status === nav);
-	}
+	currentProducts = currentProducts.filter((product) => product.status === nav);
+
+	// if(category === 'Wszystkie') {
+	// 	currentProducts = products;
+	// } 
+	// else {
+		
+	// }
 
 	renderProducts(currentProducts);
 }));

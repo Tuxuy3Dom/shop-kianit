@@ -364,6 +364,7 @@ body div {
     font-weight: 400;
     font-size: 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 }
@@ -419,6 +420,10 @@ body div {
 }
 
 .product-item.on-sale .product-item-sale-info {
+    display: block;
+}
+
+.product-item.on-status .product-item-sale-info {
     display: block;
 }
 
