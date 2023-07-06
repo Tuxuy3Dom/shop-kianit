@@ -6,6 +6,7 @@ const products = [
     category: "drut",
     price: 60.00,
     image: "./img/drut0-8.jpg",
+    status: "Promocja",
     sale: true,
     saleAmount: 4, 
 },
@@ -32,6 +33,7 @@ const products = [
     category: "zacisk",
     price: 24.00,
     image: "./img/zacisk09-300.jpg",
+    status: "Promocja",
     sale: true,
     saleAmount: 2, 
 },
@@ -50,6 +52,7 @@ const products = [
     category: "szybka",
     price: 1.85,
     image: "./img/szybka-90-110.jpg",
+    status: "Nowość",
 },
 {
     id: 6,
@@ -58,5 +61,7 @@ const products = [
     category: "wentylator",
     price: 48,
     image: "./img/wentylator-12038.jpg",
+    status: "Nowość",
+    sale: false,
 },
 ]

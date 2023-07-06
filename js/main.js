@@ -49,7 +49,7 @@ const renderProducts = (items) => {
 		  <span class="price-sale">${(items[i].price - items[i].saleAmount).toFixed(2)} zł</span>
 		</div>
 		<button data-id="${items[i].id}" class="product-add-to-basket-btn">Dodaj do koszyka</button>
-		<p class="product-item-sale-info">Promocja</p>
+		<p class="product-item-sale-info">${items[i].status}</p>
 		
 		`
 		productsSection.appendChild(newProduct);
@@ -64,9 +64,18 @@ const renderProducts = (items) => {
 	-- with products.js -- category 
 */
 const renderCategories = (items) => {
+	
+	// Create list of categories
 	let categories = new Set();
+	
+	// Create list of categories for (promcje and nowość)
+	let navStatus = new Set();
+	
 	for(let i =0; i < items.length; i++) {
 		categories.add(items[i].category);
+		if (items[i].status != undefined) {
+			navStatus.add(items[i].status);
+		}
 	}
 
 	const categoriesItems = document.querySelector(".categories-items");
@@ -82,6 +91,20 @@ const renderCategories = (items) => {
 		index === 0 ? newCategory.classList.add("active") : "";
 
 		categoriesItems.appendChild(newCategory);
+	})
+
+	const statusNav = document.querySelector(".header-nav");
+
+	navStatus = [...navStatus];
+
+	navStatus.forEach((status, index, arr) => {
+		const newNavStatus = document.createElement("button");
+		newNavStatus.innerHTML = status;
+		// add data-category to buttons categories in index.html
+		newNavStatus.dataset.status = status;
+
+		index === 0 ? newNavStatus.classList.add("active"): "";
+		statusNav.appendChild(newNavStatus)
 	})
 }
 
@@ -108,6 +131,27 @@ categoriesButtons.forEach(btn => btn.addEventListener('click', (e) => {
 
 	renderProducts(currentProducts);
 }));
+
+const navButtons = document.querySelectorAll('.header-nav button');
+
+navButtons.forEach(btn => btn.addEventListener('click', (e) => {
+	const nav = e.target.dataset.status;
+
+	navButtons.forEach((btn) => btn.classList.remove("active"));
+	e.target.classList.add("active");
+
+	currentProducts = products;
+
+	if(category === 'Wszystkie') {
+		currentProducts = products;
+	} 
+	else {
+		currentProducts = currentProducts.filter((product) => product.status === nav);
+	}
+
+	renderProducts(currentProducts);
+}));
+
 
 const searchBarInput = document.querySelector(".search-bar-input");
 

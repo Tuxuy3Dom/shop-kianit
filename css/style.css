@@ -111,6 +111,33 @@ body div {
 
 /* Section main categories start */
 
+.header-nav {
+    display: flex;
+    justify-content: center;
+    /* padding: 5px; */
+    gap: 10px;
+}
+
+.header-nav button {
+    font-size: 20px;
+    padding: 10px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-nav button:hover {
+    background: #000;
+    color: #ABABAB; 
+}
+
+.header-nav button.active {
+    background: #000;
+    color: #ABABAB;
+}
+
+
 .categories {
     display: flex;
     flex-direction: column;
