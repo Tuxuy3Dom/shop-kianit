@@ -99,12 +99,131 @@ body div {
 
 /* Expanding menu start */
 
+.basket-modal {
+    cursor: pointer;
+}
+
 .header-basket {
     display: flex;
     align-items: center;
     font-size: 20px;
     font-weight: 400;
     gap: 5px;
+}
+
+/* The Modal (background) */
+.modal-show {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    position: fixed;
+    right: 0;
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 0;
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+    height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* Modal header */
+.modal-header {
+    padding: 16px 16px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+/* Modal Body */ 
+.modal-body {
+    padding: 16px 16px;
+}
+
+.modal-img-offers {
+    width: 150px;
+    height: 100px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 16px 16px;
+    background: #201E18;
+    /* background-color: #5cb85c; */
+    color: #ABABAB;
+    display: flex;
+    justify-content: end;
+}  
+
+.modal-footer button {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #DD6C46;
+    color: white;
+    cursor: pointer;
+}  
+
+.modal-footer button:hover {
+    opacity: 0.7;
+}  
+
+/* The Close Button */
+.close-modal {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close-modal:hover,
+.close-modal:focus {
+    color: #5cb85c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+  
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+  
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
 }
 
 /* Section Header end */

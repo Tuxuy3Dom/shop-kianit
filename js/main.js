@@ -5,6 +5,7 @@ let addToBasketButtons;
 // donwload section with class products with offers.html
 const productsSection = document.querySelector(".products");
 
+const modalOffersPrice = document.querySelector(".modal-offers-price");
 const basketAmountSpan = document.querySelector(".basket-amount"); 
 const basketClearBtn = document.querySelector(".basket-clear-btn");
 
@@ -25,8 +26,8 @@ const addToBasket = (e) => {
 	basketTotal > 0 
 	? basketClearBtn.classList.add("active") 
 	: basketClearBtn.classList.remove("active"); 
-
-	basketAmountSpan.innerHTML = `${basketTotal} zł`;
+	basketAmountSpan.innerHTML = `Kwota ${basketTotal} zł.`;
+	modalOffersPrice.innerHTML = `Cena: ${basketTotal} zł.`;
 };
 
 /* 
@@ -95,7 +96,7 @@ const renderCategories = (items) => {
 
 	const statusNav = document.querySelector(".header-nav");
 
-	navStatus = [...navStatus];
+	navStatus = ['Wszystkie', ...navStatus];
 
 	navStatus.forEach((status, index, arr) => {
 		const newNavStatus = document.createElement("button");
@@ -142,14 +143,14 @@ navButtons.forEach(btn => btn.addEventListener('click', (e) => {
 
 	currentProducts = products;
 
-	currentProducts = currentProducts.filter((product) => product.status === nav);
+	
 
-	// if(category === 'Wszystkie') {
-	// 	currentProducts = products;
-	// } 
-	// else {
-		
-	// }
+	if(nav === 'Wszystkie') {
+		currentProducts = products;
+	} 
+	else {
+		currentProducts = currentProducts.filter((product) => product.status === nav);
+	}
 
 	renderProducts(currentProducts);
 }));
@@ -214,6 +215,84 @@ pages.forEach(function(page) {
 });
 
 showPage(1);
+
+// const basketAmountSpan = document.querySelector(".basket-amount"); 
+// const basketClearBtn = document.querySelector(".basket-clear-btn");
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close-modal")[0];
+
+
+
+const addToBasketModal = (e) => {
+	basketOffers = [];
+	productsSection.innerHTML = "";
+	
+	for(let i = 0; i < items.length; i++) {
+		
+		const selectedId = parseInt(e.target.dataset.id);
+		const key = currentProducts.findIndex((product) => product.id === selectedId);
+		
+		basketOffers.push(currentProducts.at(key));
+		const basketProducts = basketOffers.reduce((sum, product) => {
+			if(product.sale === true) {
+				return (sum += product.price - product.saleAmount)
+			}
+			
+			return (sum += product.price); 
+		}, 0);
+
+		basketOffers > 0 
+		? basketClearBtn.classList.add("active") 
+		: basketClearBtn.classList.remove("active"); 
+		basketAmountSpan.innerHTML = `Kwota ${basketOffers} zł.`;
+
+		const modalBody = document.getElementsByClassName("modal-body");
+		modalBody.innerHTML = `
+		<img src="${items[i].image}" alt="${items[i].category}" />
+		<p class="product-name">${items[i].name}</p>
+		<p class="product-description">
+			${items[i].description.slice(0, 100)}...
+		</p>
+		<div class="product-price">
+		  <span class="price">${items[i].price.toFixed(2)} zł</span>
+		  <span class="price-sale">${(items[i].price - items[i].saleAmount).toFixed(2)} zł</span>
+		</div>
+		<button data-id="${items[i].id}" class="product-add-to-basket-btn">Dodaj do koszyka</button>
+		<p class="product-item-sale-info">${items[i].status}</p>
+		
+		`
+		productsSection.appendChild(newProduct);
+	}
+};
+
+addToBasketOffers = document.querySelectorAll(".product-add-to-basket-btn");
+addToBasketOffers.forEach((btn) => btn.addEventListener("click", addToBasketModal));
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 
 
 

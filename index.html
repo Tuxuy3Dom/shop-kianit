@@ -13,81 +13,105 @@
 </head>
 <body id="body">
   <!-- Header main page include <header.html> start -->
-  <header class="header">
-    <div class="header-wrapper">
-      <h1 class="header-title">
-        <li class="logo">
-            <a href="#"><img src="favicon/logo_transparent.png"></a>
-        </li>
-      </h1>
-      <div class="search-bar">
-          <button type="submit" class="search-bar-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <input type="text" class="search-bar-input" placeholder="Wyszukaj w sklepie" autocomplete="off" />
-      </div>
+<header class="header">
+  <div class="header-wrapper">
+    <h1 class="header-title">
+      <li class="logo">
+          <a href="#"><img src="favicon/logo_transparent.png"></a>
+      </li>
+    </h1>
+    <div class="search-bar">
+        <button type="submit" class="search-bar-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="text" class="search-bar-input" placeholder="Wyszukaj w sklepie" autocomplete="off" />
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" class="basket-modal">      
       <div class="header-basket">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <p class="basket-amount">Koszyk</p>
-          <button class="basket-clear-btn">x</button> 
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p class="basket-amount">Koszyk</p>
+        <span class="basket-clear-btn"><!-- &times; --></span> 
+      </div>
+    </button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal-show">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-modal">&times;</span>
+          <h2>Koszyk</h2>
+        </div>
+        <div class="modal-body">
+          <img src="img/drut0-8.jpg" alt="Zdjęcie główne produktu" class="modal-img-offers">
+          <h3>Drut spawalniczy Tysweld T20.003 5 kg</h3>
+          <span class="modal-offers-price">Cena produktu</span>
+          <div>
+            <input type="number" min="1" max="100" value="1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button>Zamówić</button>
+        </div>
       </div>
     </div>
-    <div class="header-nav"></div>
-  </header>
-  <!-- Header main page include <header.html> end -->
+  </div>
+  <div class="header-nav"></div>
+</header>
+<!-- Header main page include <header.html> end -->
     
-  <!-- Main categories and banners on home page start -->
-  <main class="container-cat">
-    <aside class="categories">
-      <h1 class="categories-title">Kategorie</h1>
-      <section class="categories-items">
-      </section>
-    </aside>
+<!-- Main categories and banners on home page start -->
+<main class="container-cat">
+  <aside class="categories">
+    <h1 class="categories-title">Kategorie</h1>
+    <section class="categories-items">
+    </section>
+  </aside>
 
-    <!-- Create banner main page start -->
-    <section class="banner-wrapper">
-      <div class="banner-container">
-        <div class="banner-img-wrapper">
-          <div class="banner-padding">
-            <div class="banner-abs">
-              <div class="banner-abs-main">
-                <div class="banner-inner-wrapper">
-                  <img src="/img/banner.jpg" alt="Banner strony głównej" class="Coverphoto">
-                </div>
+  <!-- Create banner main page start -->
+  <section class="banner-wrapper">
+    <div class="banner-container">
+      <div class="banner-img-wrapper">
+        <div class="banner-padding">
+          <div class="banner-abs">
+            <div class="banner-abs-main">
+              <div class="banner-inner-wrapper">
+                <img src="/img/banner.jpg" alt="Banner strony głównej" class="Coverphoto">
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Create banner main page end -->
-
-  </main>
-  <!-- Main categories and banners on home page start -->
-  
-  <!-- Content section - our offers - start include <offers.html> -->
-    <h2 class="offers-title">Nasze oferty</h2>
-    <section class="products"></section>
-    <div class="pagination">
-      <button class="page active">1</button>
-      <button class="page">2</button>
-      <button class="page">3</button>
     </div>
-    <p class="empty-state">Nie znaleziono żadnego produktu...</p>
-    <!-- <div include-html="offers.html"></div> -->
-  <!-- Content section - our offers - start include <offers.html> -->
+  </section>
+  <!-- Create banner main page end -->
 
-
-  <!-- Footer section include <footer.html> -->
-    <div include-html="footer.html"></div>
-  <!-- Footer section -->
-
-
+</main>
+<!-- Main categories and banners on home page start -->
   
-  <!-- JavaScript files run - start -->
+<!-- Content section - our offers - start include <offers.html> -->
+  <h2 class="offers-title">Nasze oferty</h2>
+  <section class="products"></section>
+  <div class="pagination">
+    <button class="page active">1</button>
+    <button class="page">2</button>
+    <button class="page">3</button>
+  </div>
+  <p class="empty-state">Nie znaleziono żadnego produktu...</p>
+  <!-- <div include-html="offers.html"></div> -->
+<!-- Content section - our offers - start include <offers.html> -->
+
+
+<!-- Footer section include <footer.html> -->
+  <div include-html="footer.html"></div>
+<!-- Footer section -->
+
+<!-- JavaScript files run - start -->
   <script>includeHTML();</script>
   <script src="/js/products.js"></script>
-	<script src="/js/main.js"></script>
-  <!-- JavaScript files end -->
+  <script src="/js/main.js"></script>
+<!-- JavaScript files end -->
 </body>
 </html>
