@@ -5,6 +5,17 @@
     outline: none;
     margin: 0;
     padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+
+}
+
+img {
+    width: 100%;
 }
 
 body {
